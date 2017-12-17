@@ -84,6 +84,23 @@ namespace ProyectFinal_Anthony_Santana.BLL
             }
             return false;
         }
+        public static List<Peliculas> ListarPeliculas()
+        {
+            List<Peliculas> listado = null;
+            using (var conexion = new RegistroDb())
+            {
+                try
+                {
+                    listado = conexion.peliculadb.OrderBy(c => c.PeliculaId).ToList();
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+            return listado;
+        }
         public static List<Clientes> Listar()
         {
             List<Clientes> listado = null;
