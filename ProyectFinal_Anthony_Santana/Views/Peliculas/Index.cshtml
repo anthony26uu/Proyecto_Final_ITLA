@@ -5,6 +5,11 @@
 }
 <div class="jumbotron">
     <h2>LISTADO DE PELICULAS</h2>
+
+    <form action="~/Reportes/Ventas/ReportPeliculas.aspx">
+        <input class="btn-danger" type="submit" value="Imprimir" />
+    </form>
+
     </div>
     <p>
         @Html.ActionLink("NUEVA", "Create")
