@@ -1,0 +1,67 @@
+﻿@model IEnumerable<ProyectFinal_Anthony_Santana.Models.Clientes>
+
+@{
+    ViewBag.Title = "CONSULTA CLIENTES";
+}
+
+<div class="text-center">
+
+    <h1>LISTADO CLIENTES</h1>
+
+</div>
+<p class="btn-lg">
+    @Html.ActionLink("NUEVO", "Create")
+</p>
+
+<table class="table">
+
+    <tr>
+        <th class="table-bordered">
+            @Html.DisplayNameFor(model => model.Nombres)
+        </th>
+        <th class="table-bordered">
+            @Html.DisplayNameFor(model => model.Apellido)
+        </th>
+        <th class="table-bordered">
+            @Html.DisplayNameFor(model => model.Direccion)
+        </th>
+        <th class="table-bordered">
+            @Html.DisplayNameFor(model => model.Telefono)
+        </th>
+        <th class="table-bordered">
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th></th>
+    </tr>
+
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.ActionLink("EDITAR", "Edit", new { id = item.ClienteId }) |
+                @Html.ActionLink("DETALLES", "Details", new { id = item.ClienteId }) |
+                @Html.ActionLink("ELIMINAR", "Delete", new { id = item.ClienteId })
+            </td>
+
+        </tr>
+
+    }
+
+</table>

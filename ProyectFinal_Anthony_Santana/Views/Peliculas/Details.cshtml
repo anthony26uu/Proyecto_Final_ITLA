@@ -1,0 +1,62 @@
+﻿@model ProyectFinal_Anthony_Santana.Models.Peliculas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="jumbotron">
+    <h2>LISTADO DE PELICULAS</h2>
+
+</div>
+
+<div>
+  
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Genero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Existencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Existencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duracion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duracion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+
+    </dl>
+</div>
+
+<div class="jumbotron">
+    @Html.ActionLink("Editar", "Edit", new { id = Model.PeliculaId }) |
+    @Html.ActionLink("Volver a Lista", "Index")
+ </div>

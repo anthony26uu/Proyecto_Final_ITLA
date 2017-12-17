@@ -8,7 +8,9 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+
+    
+    <div class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -16,14 +18,48 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("INICIO", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                 
+                    <li>@Html.ActionLink("INFORMACION", "About", "Home")</li>
+                    <li>@Html.ActionLink("CONTACTOS", "Contact", "Home")</li>
+                  
+                    <li class="dropdown">
+
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Peliculas <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">PELICULAS</li>
+                            <li>@Html.ActionLink("Registrar", "Create", "Peliculas")</li>
+                            <li>@Html.ActionLink("Consulta", "Index", "Peliculas")</li>
+                          
+                        </ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">CLIENTES <b class="caret"></b></a>
+
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">CLIENTES</li>
+                            <li>@Html.ActionLink("Registrar", "Create", "Clientes")</li>
+                            <li>@Html.ActionLink("Consulta", "Index", "Clientes")</li>
+                 
+
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">SERIES <b class="caret"></b></a>
+
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">CLIENTES</li>
+                            <li>@Html.ActionLink("Registrar", "Create", "Series")</li>
+                            <li>@Html.ActionLink("Consulta", "Index", "Series")</li>
+
+
+                        </ul>
+                    </li>
                 </ul>
+
             </div>
         </div>
     </div>
@@ -31,7 +67,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Proyecto Final ITLA  Copyright ANTHONY SATNANA</p>
         </footer>
     </div>
 

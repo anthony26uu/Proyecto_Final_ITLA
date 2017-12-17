@@ -1,0 +1,64 @@
+﻿@model ProyectFinal_Anthony_Santana.Models.Clientes
+
+
+
+    @{
+        ViewBag.Title = "CONSULTA CLIENTES";
+    }
+
+
+   <h1> Detalles de cliente </h1>
+
+  
+
+
+    <div>
+        <span class="input-group-addon">CLIENTES:</span>
+        <hr />
+        <dl class="input-group-addon">
+            <dt>
+                @Html.DisplayNameFor(model => model.Nombres)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Nombres)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Apellido)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Direccion)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Direccion)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Telefono)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+        </dl>
+    </div>
+<div class="jumbotron">
+    @Html.ActionLink("Editar Clinte ", "Edit", new { id = Model.ClienteId }) |
+    @Html.ActionLink("Volver a lista", "Index")
+    </div>
